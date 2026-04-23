@@ -17,11 +17,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
 
-      - name: Se configura JDK 25 (Temurin)
+      - name: Se configura JDK 21 (Temurin)
         uses: actions/setup-java@v5
         with:
           distribution: temurin
-          java-version: "25"
+          java-version: "21"
           check-latest: true
           cache: gradle
 
