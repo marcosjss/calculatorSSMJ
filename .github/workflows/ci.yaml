@@ -42,3 +42,12 @@ jobs:
         with:
           name: jacoco-report
           path: build/reports/jacoco/test/html
+
+      - name: Análisis estático de código
+        run: ./gradlew checkstyleMain --no-daemon
+
+      - name: Se sube el informe Checkstyle
+        uses: actions/upload-artifact@v4
+        with:
+        name: checkstyle-report
+        path: build/reports/checkstyle
